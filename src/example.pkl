@@ -1,0 +1,11 @@
+import "exampleBase.pkl" as base
+
+example1: base.exampleBaseClass = base.exampleTemplate
+
+example2: base.exampleBaseClass = (base.exampleTemplate) {
+  name="Updated Name"
+}
+
+example3: base.exampleBaseClass = (base.exampleTemplate) {
+  optionalParams {OptionalName="New Name"}
+}

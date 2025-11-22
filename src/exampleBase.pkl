@@ -1,0 +1,16 @@
+module exampleBase
+
+class exampleBaseClass {
+  foo: String = "bar"
+  foo_int: Int = 5432
+  name: String = "app"
+  user: String = "appuser"
+  password: String = "changeme"
+  optionalParams { 
+        opt1 = 1
+        opt2 = 2
+    }
+}
+
+/* create a ready-made instance (template) */
+exampleTemplate: exampleBaseClass = new exampleBaseClass {}

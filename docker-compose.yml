@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  pkl-runner:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ./src:/workspace/src
+    working_dir: /workspace
+    entrypoint: ["pkl", "eval"]
+    command: ["src/example.pkl", "--output", "src/example.json"]

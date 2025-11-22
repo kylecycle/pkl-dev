@@ -1,20 +1,25 @@
 {
     "name": "PKL Dev",
     "dockerFile": "Dockerfile",
-    "context": ".",
+    "context": "..",
     "workspaceFolder": "/workspace",
+    "remoteUser": "devuser",
+
+    "updateRemoteUserUID": true,
+
     "postCreateCommand": "pkl --version",
+
     "mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
-    ], 
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+
     "customizations": {
         "vscode": {
             "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash"
+                "terminal.integrated.defaultProfile.linux": "bash"
             },
             "extensions": [
-                "formulahendry.code-runner",
-                "ms-vscode.cpptools"
+                "formulahendry.code-runner"
             ]
         }
     }
